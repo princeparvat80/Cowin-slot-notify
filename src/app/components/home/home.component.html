@@ -17,13 +17,14 @@
           <div class="fl_left">
             <ul class="nospace">
               <li>
-                <i class="fas fa-phone rgtspace-5"></i> +00 (123) 456 7890
+                <i class="fas fa-phone rgtspace-5"></i> +91 70xxxxxx45
               </li>
               <li>
-                <i class="far fa-envelope rgtspace-5"></i> info@domain.com
+                <i class="far fa-envelope rgtspace-5"></i> covin@domain.com
               </li>
             </ul>
           </div>
+          <!----------------------------------------------- Icons -------------------------------->
           <div class="fl_right">
             <ul class="nospace">
               <li>
@@ -58,6 +59,7 @@
               </li>
             </ul>
           </div>
+           <!----------------------------------------------- Icons -------------------------------->
         </div>
       </div>
 
@@ -74,12 +76,9 @@
               <li>
                 <a class="drop" href="#">Pages</a>
                 <ul>
-                  <li><a href="pages/gallery.html">Gallery</a></li>
-                  <li><a href="pages/full-width.html">Full Width</a></li>
-                  <li><a href="pages/sidebar-left.html">Sidebar Left</a></li>
-                  <li><a href="pages/sidebar-right.html">Sidebar Right</a></li>
-                  <li><a href="pages/basic-grid.html">Basic Grid</a></li>
-                  <li><a href="pages/font-icons.html">Font Icons</a></li>
+                  <li><a routerLink="/pincode" >Search by Pincode</a></li>
+                  <li><a href="pages/full-width.html">Search by District</a></li>
+                  <li><a href="pages/sidebar-left.html">Search by Map</a></li>
                 </ul>
               </li>
               <li>
@@ -97,9 +96,6 @@
                   <li><a href="#">Level 2</a></li>
                 </ul>
               </li>
-              <li><a href="#">Link Text</a></li>
-              <li><a href="#">Link Text</a></li>
-              <li><a href="#">Link Text</a></li>
             </ul>
           </nav>
         </header>
@@ -115,9 +111,9 @@
               fusce felis ipsum feugiat sed blandit id scelerisque non sapien.
             </p>
             <footer>
-              <button class= "btn  nospace inline pushright" >Search by Pin</button>
-              <button class= "btn inverse nospace inline pushright" >Search by District</button>
-              <button class= "btn inverse nospace inline pushright" >Search by Map</button>
+              <a class= "btn  nospace inline pushright" routerLink="/pincode" >Search by Pin</a>
+              <a class= "btn inverse nospace inline pushright" >Search by District</a>
+              <a class= "btn inverse nospace inline pushright" >Search by Map</a>
             </footer>
           </article>
         </div>
@@ -537,3 +533,4 @@
     <a id="backtotop" href="#top"><i class="fas fa-chevron-up"></i></a>
   </body>
 </html>
+<router-outlet></router-outlet>

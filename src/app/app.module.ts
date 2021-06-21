@@ -7,6 +7,7 @@ import { HomeComponent } from './components/home/home.component';
 import { PincodeComponent } from './components/pincode/pincode.component';
 import { DistrictComponent } from './components/district/district.component';
 import { MapComponent } from './components/map/map.component';
+import { HttpClientModule } from '@angular/common/http';
 
 
 @NgModule({
@@ -20,7 +21,8 @@ import { MapComponent } from './components/map/map.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,0 +1,150 @@
+/* searchbar */
+* {
+  box-sizing: border-box;
+}
+
+form.example input[type="text"] {
+  padding: 10px;
+  font-size: 17px;
+  border: 1px solid grey;
+  float: left;
+  width: 40%;
+  background: #f1f1f1;
+  margin-left: 300px;
+  margin-top: 60px;
+}
+
+form.example button {
+  float: left;
+  width: 15%;
+  padding: 10px;
+  background: #3e8e41;
+  color: white;
+  font-size: 17px;
+  border: 1px solid grey;
+  border-left: none;
+  cursor: pointer;
+  margin-top: 60px;
+}
+
+form.example button:hover {
+  background: #3e8e41;
+}
+
+form.example::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+/* button row */
+.button {
+  background-color: #4caf50; /* Green */
+  border: none;
+  color: white;
+  padding: 10px 25px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+  border-radius: 12px;
+  margin-left: 50px;
+  margin-top: 70px;
+}
+
+.button1 {
+  background-color: #394dc0;
+  color: black;
+  border: 2px solid;
+}
+
+.button1:hover {
+  background-color: #2a0dac;
+  color: white;
+}
+
+.button2 {
+  background-color: #394dc0;
+  color: black;
+  border: 2px solid;
+}
+
+.button2:hover {
+  background-color: #2a0dac;
+  color: white;
+}
+
+.button3 {
+  background-color: #394dc0;
+  color: black;
+  border: 2px solid;
+}
+
+.button3:hover {
+  background-color: #2a0dac;
+  color: white;
+}
+
+.button4 {
+  background-color: #394dc0;
+  color: black;
+  border: 2px solid;
+}
+
+.button4:hover {
+  background-color: #2a0dac;
+  color: white;
+}
+
+.button5 {
+  background-color: #394dc0;
+  color: black;
+  border: 2px solid;
+}
+
+.button5:hover {
+  background-color: #2a0dac;
+  color: white;
+}
+.button6 {
+  background-color: #394dc0;
+  color: black;
+  border: 2px solid;
+}
+
+.button6:hover {
+  background-color: #2a0dac;
+  color: white;
+}
+.button7 {
+  background-color: #394dc0;
+  color: black;
+  border: 2px solid;
+}
+
+.button7:hover {
+  background-color: #2a0dac;
+  color: white;
+}
+p {
+  margin-left: 10px;
+  text-align: center;
+}
+// slot
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  background-color: white;
+}
+
+th,
+td {
+  padding: 8px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+  background-color: white;
+}

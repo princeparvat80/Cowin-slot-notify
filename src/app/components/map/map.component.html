@@ -1,1 +1,45 @@
-<p>map works!</p>
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>CoWinNotify</title>
+</head>
+<style>
+  input[text]
+  {
+    width:80%;
+  }
+ 
+ agm-map
+{
+  width:80%;
+  height:600px;
+}
+.map {
+  margin: auto;
+  width: 80%;
+  min-height: 50vh;
+  height: 10;
+}
+
+</style>
+<body>
+<div class="container">
+    <div class="form-group">
+    <input type="text"  (keydown.enter)="$event.preventDefault()" placeholder="search the nearest location" #search style="width:80%">
+    </div>
+    <br>
+  <agm-map [latitude]="lat" [longitude]="long" [zoom]="zoom"  >
+    <agm-marker  [latitude]="lat" [longitude]="long"  >
+    <agm-info-window #infowindow>
+      hi i love india
+    </agm-info-window>
+    
+    
+  </agm-marker>
+    
+  </agm-map>
+  
+  </div>
+</body>
+</html>

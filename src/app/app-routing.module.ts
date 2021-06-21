@@ -4,6 +4,7 @@ import { PincodeComponent } from './components/pincode/pincode.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
+
 const routes: Routes = [
   {path: 'search-by-pincode', component: PincodeComponent},
   {path: 'search-by-District', component: DistrictComponent},

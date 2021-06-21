@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AuthService } from 'src/app/auth.service';
 
 @Component({
   selector: 'app-district',
@@ -7,9 +8,26 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DistrictComponent implements OnInit {
 
-  constructor() { }
+  constructor(private auth: AuthService) { 
+    this.auth.getData().subscribe(data=>{
+      console.warn(data)
+    })
+  }
 
-  ngOnInit(): void {
+  ngOnInit() {
+    this.state = this.auth.state();
+    
+    console.log(this.state);
+
+  }
+  state:any=[];
+  city:any=[];
+  
+  
+
+  onSelect(state:any){
+    this.city = this.auth.city().filter(e=>e.id == state.target.value);  
+    console.log(this.city);
   }
 
 }

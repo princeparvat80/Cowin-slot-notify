@@ -2,8 +2,8 @@
     <div class="form-group">
     <input type="text" class="form-control" (keydown.enter)="$event.preventDefault()" placeholder="search the nearest location" #search>
     </div>
-  <agm-map [latitude]="lat" [longitude]="long" [zoom]="zoom"  >
-    <agm-marker  [latitude]="lat" [longitude]="long" *ngFor="let centers of collections" [latitude]="lat" [longitude]="long" >
+  <agm-map  [latitude]="lat" [longitude]="long" [zoom]="zoom"  >
+    <agm-marker  [latitude]="lat" [longitude]="long"  >
     <agm-info-window #infowindow>
       hi i love india
     </agm-info-window>

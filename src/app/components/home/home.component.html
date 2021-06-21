@@ -10,20 +10,21 @@
   <body id="top">
     <div
       class="bgded"
-      style="background-image: url('images/demo/backgrounds/01.png')"
+      style="background-image: url(https://thebridge.in/h-upload/2021/04/24/3588-covid-19-vaccine.webp)"
     >
       <div class="wrapper overlay row0">
         <div id="topbar" class="hoc clear">
           <div class="fl_left">
             <ul class="nospace">
               <li>
-                <i class="fas fa-phone rgtspace-5"></i> +00 (123) 456 7890
+                <i class="fas fa-phone rgtspace-5"></i> +91 70xxxxxx45
               </li>
               <li>
-                <i class="far fa-envelope rgtspace-5"></i> info@domain.com
+                <i class="far fa-envelope rgtspace-5"></i> covin@domain.com
               </li>
             </ul>
           </div>
+          <!----------------------------------------------- Icons -------------------------------->
           <div class="fl_right">
             <ul class="nospace">
               <li>
@@ -58,6 +59,7 @@
               </li>
             </ul>
           </div>
+           <!----------------------------------------------- Icons -------------------------------->
         </div>
       </div>
 
@@ -74,12 +76,9 @@
               <li>
                 <a class="drop" href="#">Pages</a>
                 <ul>
-                  <li><a href="pages/gallery.html">Gallery</a></li>
-                  <li><a href="pages/full-width.html">Full Width</a></li>
-                  <li><a href="pages/sidebar-left.html">Sidebar Left</a></li>
-                  <li><a href="pages/sidebar-right.html">Sidebar Right</a></li>
-                  <li><a href="pages/basic-grid.html">Basic Grid</a></li>
-                  <li><a href="pages/font-icons.html">Font Icons</a></li>
+                  <li><a routerLink="/search-by-pincode" >Search by Pincode</a></li>
+                  <li><a routerLink="/search-by-District">Search by District</a></li>
+                  <li><a routerLink="/search-by-Map">Search by Map</a></li>
                 </ul>
               </li>
               <li>
@@ -97,9 +96,6 @@
                   <li><a href="#">Level 2</a></li>
                 </ul>
               </li>
-              <li><a href="#">Link Text</a></li>
-              <li><a href="#">Link Text</a></li>
-              <li><a href="#">Link Text</a></li>
             </ul>
           </nav>
         </header>
@@ -115,12 +111,9 @@
               fusce felis ipsum feugiat sed blandit id scelerisque non sapien.
             </p>
             <footer>
-              <button class="=' btn  nospace inline pushright ">Search by Pin</button>
-             <button class="=' btn inverse nospace inline pushright ">Search by District</button>
-                <a routerLink="/map"> <button class="=' btn inverse nospace inline pushright ">Search by Map</button></a>
-              <ul class="nospace inline pushright">
-                
-              </ul>
+              <a class= "btn  nospace inline pushright" routerLink="/search-by-pincode" >Search by Pin</a>
+              <a class= "btn inverse nospace inline pushright" routerLink="/search-by-District" >Search by District</a>
+              <a class= "btn inverse nospace inline pushright" routerLink="/search-by-Map" >Search by Map</a>
             </footer>
           </article>
         </div>
@@ -198,7 +191,7 @@
 
     <div
       class="bgded overlay"
-      style="background-image: url('images/demo/backgrounds/01.png')"
+      style="background-image: url('https://assets.seniority.in/media/ktpl_blog/Cover_Image_1_Covid-19_Vaccine.jpg')"
     >
       <section id="services" class="hoc container clear">
         <div class="sectiontitle">
@@ -540,3 +533,4 @@
     <a id="backtotop" href="#top"><i class="fas fa-chevron-up"></i></a>
   </body>
 </html>
+<router-outlet></router-outlet>

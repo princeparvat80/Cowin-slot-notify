@@ -12,6 +12,7 @@ import { HttpClientModule } from '@angular/common/http';
 
 
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -30,6 +31,7 @@ import { HttpClientModule } from '@angular/common/http';
       apiKey:'AIzaSyDksy6N6Z1LhNP_4RErbG7YX1sBQGq7nmk',
       libraries: ['geometry','places']
     })
+   
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -6,10 +6,25 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./pincode.component.scss']
 })
 export class PincodeComponent implements OnInit {
+  
+  user:any;
+  
+  
+  constructor() { 
 
-  constructor() { }
+    this.user = {
+      Age18: '',
+      Age45: '',
+      Covidsheild: '',
+      Covaxin: '',
+      SputnikV: '',
+      Free: '',
+     Paid: ''
+    }
+    
+  }
 
   ngOnInit(): void {
   }
-
+  
 }

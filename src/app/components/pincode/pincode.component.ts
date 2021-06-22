@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+import { PinService } from 'src/app/pin.service';
 @Component({
   selector: 'app-pincode',
   templateUrl: './pincode.component.html',
@@ -8,9 +8,10 @@ import { Component, OnInit } from '@angular/core';
 export class PincodeComponent implements OnInit {
   
   user:any;
+  result:any;
   
   
-  constructor() { 
+  constructor(private code:PinService) { 
 
     this.user = {
       Age18: '',
@@ -21,7 +22,10 @@ export class PincodeComponent implements OnInit {
       Free: '',
      Paid: ''
     }
-    
+   this.code.getData().subscribe(data=>{
+     this.result=data
+     console.warn(this.result);
+   }) 
   }
 
   ngOnInit(): void {

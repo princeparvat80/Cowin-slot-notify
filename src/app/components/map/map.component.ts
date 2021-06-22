@@ -58,10 +58,10 @@ export class MapComponent implements OnInit {
 
     });
     
-    this.AniService.getcenter().subscribe((result)=>
+    this.AniService.getcenter().subscribe((result:any)=>
     {
       
-      this.collections=result;
+      this.collections=result.centers;
       console.log(this.collections);
     })
     

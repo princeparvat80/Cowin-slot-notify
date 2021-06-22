@@ -1,6 +1,6 @@
 import { TestBed } from '@angular/core/testing';
 
-import { AniService } from './ani.service';
+import { AniService } from './map.service';
 
 describe('AniService', () => {
   let service: AniService;

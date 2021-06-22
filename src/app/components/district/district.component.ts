@@ -1,6 +1,7 @@
 import { InfoWindowManager } from '@agm/core';
 import { Component, OnInit } from '@angular/core';
-import { AuthService } from 'src/app/auth.service';
+import { AuthService } from 'src/Service/district.service';
+
 
 @Component({
   selector: 'app-district',

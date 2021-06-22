@@ -5,7 +5,7 @@ import {  MapsAPILoader } from '@agm/core';
 @Component({
   selector: 'app-map',
   templateUrl: './map.component.html',
-  styleUrls: ['./map.component.css']
+  styleUrls: ['./map.component.scss']
 })
 export class MapComponent implements OnInit {
   collections:any;
@@ -58,10 +58,10 @@ export class MapComponent implements OnInit {
 
     });
     
-    this.AniService.getcenter().subscribe((result)=>
+    this.AniService.getcenter().subscribe((result:any)=>
     {
       
-      this.collections=result;
+      this.collections=result.centers;
       console.log(this.collections);
     })
     

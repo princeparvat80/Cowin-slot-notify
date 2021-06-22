@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { PinService } from 'src/Service/pin.service';
+import { PinService } from 'src/app/Service/pin.service';
 @Component({
   selector: 'app-pincode',
   templateUrl: './pincode.component.html',

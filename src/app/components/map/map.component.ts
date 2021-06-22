@@ -1,4 +1,4 @@
-import { AniService } from '../../../Service/map.service';
+import { AniService } from '../../Service/map.service';
 import { Component, OnInit,ViewChild,ElementRef,NgZone } from '@angular/core';
 import {  MapsAPILoader } from '@agm/core';
 

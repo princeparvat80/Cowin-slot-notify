@@ -1,7 +1,8 @@
 import { StateService } from './../../state.service';
 import { InfoWindowManager } from '@agm/core';
 import { Component, OnInit } from '@angular/core';
-import { AuthService } from 'src/app/Service/district.service';
+import { DistService } from 'src/app/dist.service';
+ 
 
 
 @Component({
@@ -13,6 +14,7 @@ export class DistrictComponent implements OnInit {
  group:any;
  cluster:any;
  a:any;
+ //xyz:any;
 
   constructor(private State:StateService, private distx:StateService) { 
     
@@ -23,6 +25,14 @@ export class DistrictComponent implements OnInit {
       this.group=display.states;
       console.log(this.group)
     })
+
+
+    /* this.abc.getdis().subscribe((rest:any)=>{
+      this.xyz=rest.sessions;
+      console.log(this.xyz);
+    })*/
+    /*private abc:DistService*/
+    
     // this.distx.getdistricts().subscribe((showus:any)=>{
     //   this.cluster=showus.districts;
     //   console.log(this.cluster)

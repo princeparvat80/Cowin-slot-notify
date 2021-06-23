@@ -1,4 +1,4 @@
-import { AniService } from 'src/app/ani.service';
+import { AniService } from '../../Service/map.service';
 import { Component, OnInit,ViewChild,ElementRef,NgZone } from '@angular/core';
 import {  MapsAPILoader } from '@agm/core';
 
@@ -58,10 +58,10 @@ export class MapComponent implements OnInit {
 
     });
     
-    this.AniService.getcenter().subscribe((result)=>
+    this.AniService.getcenter().subscribe((result:any)=>
     {
       
-      this.collections=result;
+      this.collections=result.centers;
       console.log(this.collections);
     })
     

@@ -1,5 +1,7 @@
 import { InfoWindowManager } from '@agm/core';
 import { Component, OnInit } from '@angular/core';
+import { DistService } from 'src/app/dist.service';
+ 
 
 
 @Component({
@@ -8,15 +10,18 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./district.component.scss']
 })
 export class DistrictComponent implements OnInit {
-  
+  xyz:any;
 
-  constructor() { 
+  constructor(private abc:DistService) { 
     
   }
 
   ngOnInit() {
     
-    
+   /* this.abc.getdis().subscribe((rest:any)=>{
+      this.xyz=rest.sessions;
+      console.log(this.xyz);
+    })*/
     
 
   }

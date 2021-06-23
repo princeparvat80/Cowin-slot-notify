@@ -1,13 +1,13 @@
 import { TestBed } from '@angular/core/testing';
 
-import { AniService } from './ani.service';
+import { PinService } from './pin.service';
 
-describe('AniService', () => {
-  let service: AniService;
+describe('PinService', () => {
+  let service: PinService;
 
   beforeEach(() => {
     TestBed.configureTestingModule({});
-    service = TestBed.inject(AniService);
+    service = TestBed.inject(PinService);
   });
 
   it('should be created', () => {

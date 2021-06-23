@@ -3,11 +3,13 @@
 <head>
   <meta charset="utf-8">
   <title>CoWinNotify</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <style>
   input[text]
   {
     width:80%;
+   
   }
  
  agm-map
@@ -18,19 +20,27 @@
 .map {
   margin: auto;
   width: 80%;
-  min-height: 50vh;
-  height: 10;
+
+  height: 10px;
+}
+.cont1
+
+{
+  margin-left: 200px;
+ 
+  
+ 
 }
 
 </style>
-<body>
-<div class="container">
+<body style="background-color: white;">
+<div class="container cont1">
     <div class="form-group">
     <input type="text"  (keydown.enter)="$event.preventDefault()" placeholder="search the nearest location" #search style="width:80%">
     </div>
     <br>
   <agm-map [latitude]="lat" [longitude]="long" [zoom]="zoom"  >
-    <agm-marker  [latitude]="lat" [longitude]="long"  >
+    <agm-marker  [latitude]="lat" [longitude]="long"  *ngFor="let centers of collections" [latitude]="lat" [longitude]="long"  >
     <agm-info-window #infowindow>
       hi i love india
     </agm-info-window>

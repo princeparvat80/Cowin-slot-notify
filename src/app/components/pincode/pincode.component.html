@@ -1,13 +1,15 @@
 <!-- search bar -->
-<form class="example"  action="/action_page.php" >
-    <input type="text" pattern="[0-9]{6}" maxlength="6" placeholder="Enter your PIN" name="search">
+
+<div>
+<form class="example"  [formGroup]="pincodeForm" >
+    <input type="text" pattern="[0-9]{6}" maxlength="6" placeholder="Enter your PIN" formControlName = "pincode">
     
-    <button  class="2"  type="submit">Search</button>
+    <button  type="submit"(click)="submitForm()">Search</button>
     
   </form>
 
    <!-- button row -->
- 
+   
    <button class="button button1">Age 18+</button>
    <button class="button button2">Age 45+</button>
    <button class="button button3">Covidsheild</button>
@@ -16,20 +18,12 @@
    <button class="button button6">Free</button>
    <button class="button button7">Paid</button>
    
+   
    <p>NOTE : The slots availability data displayed in the pincode or district search is provided by the state govt and private hospitals. <br>
      The total availability slots includes Dose-1 and Dose-2 slots. While we have real-time data, slot availability on CoWin changes rapidly. <br>
      D1: Dose 1, D2: Dose 2</p>
 
      <!-- SLOT -->
      
-     <table>
-        <tr>
-        <th *ngFor="let age18 of user.age18">{{user.age18 }}</th>
-        <th *ngFor="let age45 of user.age45">{{user.age45}}</th>
-        <th *ngFor="let covidsheild of user.covidsheild">{{user.covidsheild}}</th>
-        <th *ngFor="let covaxin of user.covaxin">{{user.covaxin}}</th>
-        <th *ngFor="let sputnik of user.sputnik">{{user.sputnik}}</th>
-        <th *ngFor="let free of user.free">{{user.free}}</th>
-        <th *ngFor="let paid of user.paid">{{user.paid}}</th>
-        </tr>
-     </table>
+    
+</div>

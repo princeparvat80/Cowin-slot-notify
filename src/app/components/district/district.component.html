@@ -21,9 +21,11 @@
                 <div class="form-floating">
 
 
-                    <select class="form-select">
+                    <select class="form-select" (change)="onselect($event)">
+                        
                         <option>Select State</option>
                         
+                        <option *ngFor="let states of group" value={{states.state_id}} >{{states.state_name}}</option>
                     </select>
                 </div>
             </div>
@@ -34,6 +36,7 @@
                     <select class="form-select">
                         <option>Select District</option>
                         
+                        <option *ngFor="let districts of cluster" >{{districts.district_name}}</option>
                     </select>
                 </div>
             </div>
@@ -58,26 +61,23 @@
             and private hospitals. The total availability <br>slots includes Dose-1 and Dose-2 slots. While we have
             real-time data, slot availability on CoWin changes rapidly. D1: Dose 1, <br>D2: Dose 2</P>
 
-       
 
-
-        
-        </div>
+    </div>
 
 
 
 
 
 
-        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
-            integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-            crossorigin="anonymous"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
-            integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
-            crossorigin="anonymous"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
-            integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
-            crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
 
 
 </body>

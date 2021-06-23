@@ -9,6 +9,7 @@ import { MapComponent } from './components/map/map.component';
 import { FormsModule } from '@angular/forms';
 import { AgmCoreModule } from '@agm/core';
 import { HttpClientModule } from '@angular/common/http';
+import {ReactiveFormsModule} from '@angular/forms';
 
 
 
@@ -27,6 +28,7 @@ import { HttpClientModule } from '@angular/common/http';
     AppRoutingModule,
     HttpClientModule ,
     FormsModule,
+    ReactiveFormsModule,
     AgmCoreModule.forRoot({
       apiKey:'AIzaSyDksy6N6Z1LhNP_4RErbG7YX1sBQGq7nmk',
       libraries: ['geometry','places']

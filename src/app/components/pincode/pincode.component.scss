@@ -1,4 +1,7 @@
 /* searchbar */
+body {
+  background-color: white;
+}
 * {
   box-sizing: border-box;
 }
@@ -38,6 +41,7 @@ form.example::after {
 }
 
 /* button row */
+
 .button {
   background-color: #4caf50; /* Green */
   border: none;
@@ -51,7 +55,7 @@ form.example::after {
   transition-duration: 0.4s;
   cursor: pointer;
   border-radius: 12px;
-  margin-left: 50px;
+  margin-left: 90px;
   margin-top: 70px;
 }
 

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { CalenderService } from 'src/app/calender.service';
 import { PinService } from 'src/app/Service/pin.service';
 @Component({
   selector: 'app-pincode',
@@ -7,21 +8,14 @@ import { PinService } from 'src/app/Service/pin.service';
 })
 export class PincodeComponent implements OnInit {
   
-  user:any;
+  
   result:any;
+  priyadarshi:any;
   
   
-  constructor(private code:PinService) { 
+  constructor(private code:PinService, private nidhi:CalenderService) { 
 
-    this.user = {
-      Age18: '',
-      Age45: '',
-      Covidsheild: '',
-      Covaxin: '',
-      SputnikV: '',
-      Free: '',
-     Paid: ''
-    }
+   
    this.code.getData().subscribe(data=>{
      this.result=data
      console.warn(this.result);
@@ -29,6 +23,11 @@ export class PincodeComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    this.nidhi.getnew().subscribe((total:any)=>
+{
+this.priyadarshi=total.centers;
+console.log(this.priyadarshi);
+})
   }
   
 }

@@ -21,9 +21,9 @@
                 <div class="form-floating">
 
 
-                    <select class="form-select" (change)="onSelect($event)">
+                    <select class="form-select">
                         <option>Select State</option>
-                        <option *ngFor="let states of state" value="{{states.id}}">{{states.name}}</option>
+                        
                     </select>
                 </div>
             </div>
@@ -33,7 +33,7 @@
 
                     <select class="form-select">
                         <option>Select District</option>
-                        <option *ngFor="let cities of city">{{cities.name}}</option>
+                        
                     </select>
                 </div>
             </div>
@@ -58,54 +58,10 @@
             and private hospitals. The total availability <br>slots includes Dose-1 and Dose-2 slots. While we have
             real-time data, slot availability on CoWin changes rapidly. D1: Dose 1, <br>D2: Dose 2</P>
 
-       <h1></h1>
-        <hr>
+       
 
-        <table id="users">
-  <tr>
-    <th *ngFor = "let column of headers">
-      {{column}}
-    </th>
-  </tr>
 
-  <tr *ngFor = "let row of rows">
-    <td *ngFor = "let column of headers">
-      {{row[column]}}
-    </td>
-  </tr>
-
-</table>
-        <!--<div>
-            <h1>Angular HTML Table Example</h1>
-            <table>
-                <thead>
-                    <tr>
-                        <th>#ID</th>
-                        <th>Name</th>
-                        <th>Email</th>
-                        <th>Phone</th>
-                        <th>Address</th>
-                        <th>Action</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr *ngFor="let item of ItemsArray
-                 |async">
-
-                        <td>{{item.name}}</td>
-                        <td>{{ item.id }}</td>
-                        <td>{{ item.name }}</td>
-                        <td>{{ item.email }}</td>
-                        <td>{{ item.phone}}</td>
-                        <td>{{ item.address }}</td>
-                        <td>
-                            <button type="button">Edit</button>
-                            <button type="button">Delete</button>
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>-->
+        
         </div>
 
 

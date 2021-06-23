@@ -1,3 +1,4 @@
+import { StateService } from './../../state.service';
 import { InfoWindowManager } from '@agm/core';
 import { Component, OnInit } from '@angular/core';
 import { AuthService } from 'src/app/Service/district.service';
@@ -9,148 +10,36 @@ import { AuthService } from 'src/app/Service/district.service';
   styleUrls: ['./district.component.scss']
 })
 export class DistrictComponent implements OnInit {
-  ItemsArray:any= [];
+ group:any;
+ cluster:any;
+ a:any;
 
-  constructor(private auth: AuthService) { 
-    this.auth.getData().subscribe(data=>{
-      console.warn(data)
+  constructor(private State:StateService, private distx:StateService) { 
+    
+  }
+
+  ngOnInit():void {
+    this.State.getstates().subscribe((display:any)=>{
+      this.group=display.states;
+      console.log(this.group)
+    })
+    // this.distx.getdistricts().subscribe((showus:any)=>{
+    //   this.cluster=showus.districts;
+    //   console.log(this.cluster)
+    // })
+    // this.abcde.getstateid(a).subscribe((giveus:any)=>{
+    //   this.troop=giveus.
+    // })
+    
+    
+    
+  }
+  onselect(group:any){
+    console.log(group)
+    this.distx.getdistricts(group.target.value).subscribe((showus:any)=>{
+      this.cluster=showus.districts;
+      console.log(this.cluster)
+    
     })
   }
-
-  ngOnInit() {
-    this.state = this.auth.state();
-    
-    console.log(this.state);
-
-    this.auth.getDat().subscribe((res: any[])=>{
-      this.ItemsArray= res;
-      console.log(res);
-    }) 
-
-    
-
-  }
-  
-  state:any=[];
-  city:any=[];
-  
-
-  
-  
-
-  onSelect(state:any){
-    this.city = this.auth.city().filter(e=>e.id == state.target.value);  
-    console.log(this.city);
-  }
-
-  headers:any = ["ID", "Name", "Age", "Gender", "Vaccine Name", "Dose 1", "Dose 2", "Address", "Free/Paid"];
-
-  rows:any = [
-    {
-      "ID" : "1",
-      "Name" : "Rahul",
-      "Age" : "18+",
-      "Gender" : "Male",
-      "Vaccine Name" : "Covishield",
-      "Dose 1": "24 Slots",
-      "Dose 2": "Booked",
-      "Address": "Ghaziabad, Apollo Clinic, 201001",
-      "Free/Paid": "Free"
-
-      
-      
-    },
-    {
-      "ID" : "5",
-      "Name" : "John",
-      "Age" : "45+",
-      "Gender" : "Male",
-      "Vaccine Name" : "Covishield",
-      "Dose 1" : "Booked",
-      "Dose 2": "60 Slots",
-      "Address": "Kolkata, Fortis Hospital, 700025",
-      "Free/Paid": "Paid"
-
-
-    },
-    {
-      "ID" : "6",
-      "Name" : "Raman",
-      "Age" : "18+",
-      "Gender" : "Male",
-      "Vaccine Name" : "Covaxin",
-      "Dose 1": "100 Slots",
-      "Dose 2": "Booked",
-      "Address": "Mumbai, Alica Hall, 400101",
-      "Free/Paid": "Paid"
-
-
-    },
-    {
-      "ID" : "7",
-      "Name" : "Mohan",
-      "Age" : "18+",
-      "Gender" : "Male",
-      "Vaccine Name" : "Sputnik V",
-      "Dose 1": "29 Slots",
-      "Dose 2": "5 Slots",
-      "Address": "Ambala, GSS School, 134203",
-      "Free/Paid": "Free"
-
-    },
-    {
-      "ID" : "8",
-      "Name" : "Shreya",
-      "Age" : "45+",
-      "Gender" : "Female",
-      "Vaccine Name" : "Covaxin",
-      "Dose 1": "Booked",
-      "Dose 2": "100 Slots",
-      "Address": "Ghaziabad, Divoc Health, 201017",
-      "Free/Paid": "Free"
-
-    },
-    {
-      "ID" : "11",
-      "Name" : "Ram",
-      "Age" : "18+",
-      "Gender" : "Male",
-      "Vaccine Name" : "Covishield",
-      "Dose 1": "24 Slots",
-      "Dose 2": "Booked",
-      "Address": "Ghaziabad, Apollo Clinic, 201001",
-      "Free/Paid": "Free"
-
-      
-      
-    },
-    {
-      "ID" : "12",
-      "Name" : "Nitin",
-      "Age" : "45+",
-      "Gender" : "Male",
-      "Vaccine Name" : "Covishield",
-      "Dose 1" : "Booked",
-      "Dose 2": "60 Slots",
-      "Address": "Kolkata, Fortis Hospital, 700025",
-      "Free/Paid": "Paid"
-
-
-    },
-    {
-      "ID" : "13",
-      "Name" : "Alok",
-      "Age" : "18+",
-      "Gender" : "Male",
-      "Vaccine Name" : "Covaxin",
-      "Dose 1": "100 Slots",
-      "Dose 2": "Booked",
-      "Address": "Mumbai, Alica Hall, 400101",
-      "Free/Paid": "Free"
-
-
-    }
-    
-  ]
-
 }

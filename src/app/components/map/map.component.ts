@@ -1,3 +1,4 @@
+import { ForsevendaysService } from './../../forsevendays.service';
 import { AniService } from '../../Service/map.service';
 import { Component, OnInit,ViewChild,ElementRef,NgZone } from '@angular/core';
 import {  MapsAPILoader } from '@agm/core';
@@ -8,6 +9,7 @@ import {  MapsAPILoader } from '@agm/core';
   styleUrls: ['./map.component.scss']
 })
 export class MapComponent implements OnInit {
+  total:any;
   collections:any;
   lat:number;
   long:number;
@@ -20,7 +22,7 @@ export class MapComponent implements OnInit {
   
 
   constructor(private AniService:AniService , private mapsAPILoader:MapsAPILoader,
-    private ngZone:NgZone) 
+    private ngZone:NgZone,private cent:ForsevendaysService) 
     { this.lat=28.7041;
       this.long=77.1025;
       this.zoom=6;
@@ -65,7 +67,11 @@ export class MapComponent implements OnInit {
       console.log(this.collections);
     })
     
-    
+    this.cent.getcent().subscribe((center:any)=>
+    {
+      this.total=center.centers;
+      console.log(this.total);
+    })
     
   }
   private  setCurrentLocation()
